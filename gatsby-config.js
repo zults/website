@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://zults.com.br/`,
     title: `Agência Digital`,
     description: `Somos uma agência de marketing digital especializada em desenvolvimento de sites e gestão de redes sociais. Atendemos Varginha, Minas Gerais e onde você estiver`,
     author: `Zults Agência Digital`,
@@ -49,6 +50,22 @@ module.exports = {
           },
         ],
       },
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-P645D9",
+  
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+  
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+    'gatsby-plugin-sitemap',
   ],
 }
